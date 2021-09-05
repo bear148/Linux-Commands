@@ -1,0 +1,28 @@
+#!/bin/bash
+
+ARGS=1
+VERSION="a1.0.0"
+noArgs() {
+	printf "\nInvalid num of args.\n"
+}
+
+if [ $# -eq $ARGS ]
+then
+	if [ "$1" == "-help" ]; then
+		echo """BEARS - (The Command)
+Version: $VERSION
+---------------------
+HELP:
+	-help: Commands
+	-v:    Version"""
+	fi
+
+	if [ "$1" == "-v" ]; then
+		echo """version: $VERSION
+made by: Michael S.
+github:  https://github.com/BizzyPythonBear/
+BEARS (c) 2021-2022"""
+	fi
+else
+	noArgs
+fi
